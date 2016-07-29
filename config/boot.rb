@@ -8,7 +8,7 @@ module Rails
     class Server
         alias :original_default_options :default_options
         def default_options
-            original_default_options.merge Host: ENV['IP'], Port: 8080
+            original_default_options.merge Port: 8080 # , Host: ENV['IP']
         end
     end
 end
