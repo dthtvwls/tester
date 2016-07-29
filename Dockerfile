@@ -1,5 +1,5 @@
 FROM jruby:1.7.25-jre
-COPY Gemfile*
+COPY Gemfile* ./
 RUN bundle
 COPY . .
 EXPOSE 8080
