@@ -8,10 +8,7 @@ module Rails
     class Server
         alias :original_default_options :default_options
         def default_options
-            original_default_options.merge(
-                Host: UDPSocket.open { |socket| socket.connect('192.168.96.1', 1); socket.addr.last },
-                Port: 8080
-            )
+            original_default_options.merge Host: '0.0.0.0', Port: 8080
         end
     end
 end
