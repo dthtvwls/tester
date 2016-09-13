@@ -12,7 +12,5 @@ module Tester
     config.log_level = :info
     config.paths['log'] = '/dev/null'
     config.secret_key_base = SecureRandom.hex(64)
-
-    puts Socket.ip_address_list.select(&:ipv4?).map(&:ip_address)
   end
 end
